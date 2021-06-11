@@ -39,7 +39,7 @@
 									"font": "Arial;13;1",
 									"left": 312,
 									"top": 77,
-									"width": 244.322265625,
+									"width": 275.3115234375,
 									"height": 13,
 									"text": "Album"
 								},
@@ -65,7 +65,7 @@
 											"font": "Arial;13;0",
 											"left": 317,
 											"top": 100,
-											"width": 234.322265625,
+											"width": 265.3115234375,
 											"height": 13
 										},
 										{
@@ -80,7 +80,7 @@
 											"font": "Arial;13;0",
 											"left": 317,
 											"top": 115,
-											"width": 234.322265625,
+											"width": 265.3115234375,
 											"height": 13
 										},
 										{
@@ -95,7 +95,7 @@
 											"font": "Arial;13;0",
 											"left": 317,
 											"top": 130,
-											"width": 234.322265625,
+											"width": 265.3115234375,
 											"height": 13
 										},
 										{
@@ -110,7 +110,37 @@
 											"font": "Arial;13;0",
 											"left": 317,
 											"top": 145,
-											"width": 234.322265625,
+											"width": 265.3115234375,
+											"height": 13
+										},
+										{
+											"_type": "ERDColumnView",
+											"_id": "AAAAAAF5+xOV1b47b5A=",
+											"_parent": {
+												"$ref": "AAAAAAF56nTIOrD1dGA="
+											},
+											"model": {
+												"$ref": "AAAAAAF5+xOVs744z0s="
+											},
+											"font": "Arial;13;0",
+											"left": 317,
+											"top": 160,
+											"width": 265.3115234375,
+											"height": 13
+										},
+										{
+											"_type": "ERDColumnView",
+											"_id": "AAAAAAF5+ir0AL4o78Q=",
+											"_parent": {
+												"$ref": "AAAAAAF56nTIOrD1dGA="
+											},
+											"model": {
+												"$ref": "AAAAAAF5+irz374lPnk="
+											},
+											"font": "Arial;13;0",
+											"left": 317,
+											"top": 175,
+											"width": 265.3115234375,
 											"height": 13
 										},
 										{
@@ -124,23 +154,23 @@
 											},
 											"font": "Arial;13;0",
 											"left": 317,
-											"top": 160,
-											"width": 234.322265625,
+											"top": 190,
+											"width": 265.3115234375,
 											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 312,
 									"top": 95,
-									"width": 244.322265625,
-									"height": 83
+									"width": 275.3115234375,
+									"height": 113
 								}
 							],
 							"font": "Arial;13;0",
 							"left": 312,
 							"top": 72,
-							"width": 244.322265625,
-							"height": 106,
+							"width": 275.3115234375,
+							"height": 136,
 							"nameLabel": {
 								"$ref": "AAAAAAF56nTIOrD0zRQ="
 							},
@@ -283,7 +313,7 @@
 									"top": 285,
 									"width": 186.5205078125,
 									"height": 13,
-									"text": "Brani"
+									"text": "Brano"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -460,7 +490,7 @@
 										"$ref": "AAAAAAF56oHWObGBcjs="
 									},
 									"font": "Arial;13;0",
-									"left": 580,
+									"left": 611,
 									"top": 128,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -478,7 +508,7 @@
 								"$ref": "AAAAAAF56nULNLEAwas="
 							},
 							"lineStyle": 2,
-							"points": "632:296;632:120;555:120",
+							"points": "632:296;632:120;586:120",
 							"nameLabel": {
 								"$ref": "AAAAAAF56oHWObGCcbg="
 							},
@@ -617,13 +647,28 @@
 											"top": 156,
 											"width": 199.1435546875,
 											"height": 13
+										},
+										{
+											"_type": "ERDColumnView",
+											"_id": "AAAAAAF5+wiXRr4yNbQ=",
+											"_parent": {
+												"$ref": "AAAAAAF56pv5R7IsM8s="
+											},
+											"model": {
+												"$ref": "AAAAAAF5+wiXKb4vboc="
+											},
+											"font": "Arial;13;0",
+											"left": 53,
+											"top": 171,
+											"width": 199.1435546875,
+											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 48,
 									"top": 151,
 									"width": 209.1435546875,
-									"height": 23
+									"height": 38
 								}
 							],
 							"font": "Arial;13;0",
@@ -666,7 +711,8 @@
 							},
 							"name": "Titolo",
 							"type": "VARCHAR",
-							"length": "50"
+							"length": "50",
+							"unique": true
 						},
 						{
 							"_type": "ERDColumn",
@@ -676,10 +722,10 @@
 							},
 							"name": "AnnoUscita",
 							"type": "INTEGER",
-							"length": "4",
 							"referenceTo": {
 								"$ref": "AAAAAAF56pCrYbHGBX4="
-							}
+							},
+							"unique": true
 						},
 						{
 							"_type": "ERDColumn",
@@ -689,10 +735,28 @@
 							},
 							"name": "CasaDiscografica",
 							"type": "VARCHAR",
-							"length": "20",
-							"referenceTo": {
-								"$ref": "AAAAAAF56pmZwbIAkvo="
-							}
+							"unique": true
+						},
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAF5+xOVs744z0s=",
+							"_parent": {
+								"$ref": "AAAAAAF56nTIOLDxME8="
+							},
+							"name": "Genere",
+							"type": "VARCHAR",
+							"unique": true
+						},
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAF5+irz374lPnk=",
+							"_parent": {
+								"$ref": "AAAAAAF56nTIOLDxME8="
+							},
+							"name": "SupportoDistribuzione",
+							"type": "VARCHAR",
+							"length": 0,
+							"unique": true
 						},
 						{
 							"_type": "ERDColumn",
@@ -799,7 +863,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFLzntJC6EktCk="
 					},
-					"name": "Brani",
+					"name": "Brano",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",
@@ -859,7 +923,7 @@
 								"$ref": "AAAAAAF56nWwiLELh34="
 							},
 							"name": "Durata",
-							"type": "DECIMAL",
+							"type": "INTEGER",
 							"length": 0
 						},
 						{
@@ -896,87 +960,6 @@
 				},
 				{
 					"_type": "ERDEntity",
-					"_id": "AAAAAAF56nXxErEYyRI=",
-					"_parent": {
-						"$ref": "AAAAAAFLzntJC6EktCk="
-					},
-					"name": "Itinerario",
-					"ownedElements": [
-						{
-							"_type": "ERDRelationship",
-							"_id": "AAAAAAF56oUx7bGcCZM=",
-							"_parent": {
-								"$ref": "AAAAAAF56nXxErEYyRI="
-							},
-							"end1": {
-								"_type": "ERDRelationshipEnd",
-								"_id": "AAAAAAF56oUx7bGdXXE=",
-								"_parent": {
-									"$ref": "AAAAAAF56oUx7bGcCZM="
-								},
-								"reference": {
-									"$ref": "AAAAAAF56nXxErEYyRI="
-								}
-							},
-							"end2": {
-								"_type": "ERDRelationshipEnd",
-								"_id": "AAAAAAF56oUx7bGeP6Y=",
-								"_parent": {
-									"$ref": "AAAAAAF56oUx7bGcCZM="
-								},
-								"reference": {
-									"$ref": "AAAAAAF56nTIOLDxME8="
-								},
-								"cardinality": "0..*"
-							}
-						}
-					],
-					"columns": [
-						{
-							"_type": "ERDColumn",
-							"_id": "AAAAAAF56pmZwbIAkvo=",
-							"_parent": {
-								"$ref": "AAAAAAF56nXxErEYyRI="
-							},
-							"name": "ID",
-							"type": "INTEGER",
-							"length": 0,
-							"primaryKey": true
-						},
-						{
-							"_type": "ERDColumn",
-							"_id": "AAAAAAF56oQtCbGTxsc=",
-							"_parent": {
-								"$ref": "AAAAAAF56nXxErEYyRI="
-							},
-							"name": "Descrizione",
-							"type": "VARCHAR",
-							"length": 0
-						},
-						{
-							"_type": "ERDColumn",
-							"_id": "AAAAAAF56oDxM7FvAFA=",
-							"_parent": {
-								"$ref": "AAAAAAF56nXxErEYyRI="
-							},
-							"name": "Durata",
-							"type": "INTEGER",
-							"length": 0
-						},
-						{
-							"_type": "ERDColumn",
-							"_id": "AAAAAAF56oERqrF2CtA=",
-							"_parent": {
-								"$ref": "AAAAAAF56nXxErEYyRI="
-							},
-							"name": "Prezzo",
-							"type": "DECIMAL",
-							"length": 0
-						}
-					]
-				},
-				{
-					"_type": "ERDEntity",
 					"_id": "AAAAAAF56pv5RbIo27c=",
 					"_parent": {
 						"$ref": "AAAAAAFLzntJC6EktCk="
@@ -989,12 +972,26 @@
 							"_parent": {
 								"$ref": "AAAAAAF56pv5RbIo27c="
 							},
-							"name": "BraniID",
+							"name": "BranoID",
 							"type": "INTEGER",
 							"length": 0,
 							"foreignKey": true,
 							"referenceTo": {
 								"$ref": "AAAAAAF56prMirISkfc="
+							}
+						},
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAF5+wiXKb4vboc=",
+							"_parent": {
+								"$ref": "AAAAAAF56pv5RbIo27c="
+							},
+							"name": "AlbumID",
+							"type": "INTEGER",
+							"length": 0,
+							"foreignKey": true,
+							"referenceTo": {
+								"$ref": "AAAAAAF56paharHavto="
 							}
 						}
 					]

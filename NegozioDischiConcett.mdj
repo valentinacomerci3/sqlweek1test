@@ -565,7 +565,7 @@
 								"reference": {
 									"$ref": "AAAAAAF56nTIOLDxME8="
 								},
-								"cardinality": "0..*"
+								"cardinality": "1..*"
 							},
 							"end2": {
 								"_type": "ERDRelationshipEnd",
@@ -576,7 +576,7 @@
 								"reference": {
 									"$ref": "AAAAAAF56nULNLD+vs8="
 								},
-								"cardinality": "0..*"
+								"cardinality": "1..*"
 							}
 						}
 					],
@@ -757,7 +757,7 @@
 								"reference": {
 									"$ref": "AAAAAAF56nTIOLDxME8="
 								},
-								"cardinality": "0..*"
+								"cardinality": "1..*"
 							}
 						}
 					],
