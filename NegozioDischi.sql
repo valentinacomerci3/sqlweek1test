@@ -32,7 +32,7 @@ CREATE TABLE Band(
 
 	PRIMARY KEY (ID),
 
-	CHECK (NumeroComponenti > 0),
+	CHECK (NumeroComponenti > 1),
 	
 )
 
@@ -162,14 +162,12 @@ JOIN Album a
 ON ba.AlbumID = a.ID 
 join Band bd
 ON Bd.ID = a.BandID
-WHERE a.ID = ALL
-  (SELECT a.ID
-  FROM Brano
-  WHERE Brano.Titolo = 'Imagine');
+WHERE b.Titolo = 'Imagine'
+  
 
 
 --5) Restituire il numero totale di canzoni eseguite dalla band “The Giornalisti”;
-SELECT Count(*), b.ID, b.Titolo,a.Titolo, a.AnnoUscita AS'Canzoni Di The Giornalisti'
+SELECT Count(*) AS'Canzoni Di TheGiornalisti'
 FROM Brano b
 JOIN BraniAlbum ba 
 ON b.ID = ba.AlbumID
@@ -177,12 +175,14 @@ JOIN Album a
 ON ba.AlbumID = a.ID 
 join Band bd
 ON bd.ID = a.BandID
-WHERE bd.Nome = 'The Giornalisti' 
+WHERE bd.Nome = 'TheGiornalisti' 
+
+
 
 
 --6) Contare per ogni album, la somma dei minuti dei brani contenuti.
 
-SELECT SUM(Durata)
+SELECT SUM(b.Durata), a.Titolo, bd.Nome
 FROM Brano b
 JOIN BraniAlbum ba 
 ON b.ID = ba.AlbumID
@@ -190,7 +190,7 @@ JOIN Album a
 ON ba.AlbumID = a.ID 
 join Band bd
 ON bd.ID = a.BandID
-GROUP BY a.ID
+GROUP BY a.ID, a.Titolo, bd.Nome
 
                                                        -----VIEW-----
 CREATE VIEW [Info-Maneskin] AS
